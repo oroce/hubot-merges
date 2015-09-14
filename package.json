@@ -1,6 +1,6 @@
 {
   "name": "hubot-merges",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "List merged pull requests from github",
   "main": "index.js",
   "scripts": {
