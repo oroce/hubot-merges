@@ -1,6 +1,5 @@
 var fs = require('fs');
 var path = require('path');
-
 module.exports = function(robot) {
   var scriptsPath = path.resolve(__dirname, 'scripts');
   fs.exists(scriptsPath, function(exists)  {
@@ -9,4 +8,5 @@ module.exports = function(robot) {
         robot.loadFile(scriptsPath, file);
       });
     }
+  });
 };
