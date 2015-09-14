@@ -7,9 +7,6 @@ var print = require('../lib/print/default');
 var slack = require('../lib/print/slack');
 
 module.exports = function(robot) {
-  robot.on('slack-attachment', function(m) {
-    console.log(JSON.stringify(m, null, 2));
-  });
   var github = require('githubot')(robot);
   var options = objectAssign({}, {
     defaultBranch: 'master',
