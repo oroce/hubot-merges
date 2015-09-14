@@ -17,7 +17,9 @@ module.exports = function(robot) {
 
   robot.respond(/merges h(elp)?$/i, function(msg) {
     if (options.slack) {
-      return robot.emit('slack-attachment', slack.help());
+      return robot.emit('slack-attachment', slack.help({
+        room: msg.message.room
+      }));
     }
     return msg.send(print.help());
   });
