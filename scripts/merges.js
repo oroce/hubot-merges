@@ -7,7 +7,6 @@ var print = require('../lib/print/default');
 var slack = require('../lib/print/slack');
 
 module.exports = function(robot) {
-  var github = require('githubot')(robot);
   var options = objectAssign({}, {
     defaultBranch: 'master',
     defaultUser: process.env.HUBOT_MERGES_GITHUB_USER,
